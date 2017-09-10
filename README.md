@@ -2,6 +2,14 @@
 
 This repository contains source code for our solution at the [CIKM AnalytiCup 2017](https://competitions.codalab.org/competitions/16652). Its description can be found in the [report](#TBD).
 
+# Problem
+The task is to determine the quality of product titles created by public users on the e-commerce platform Lazada. We focuses on two main objectives, namely **Clarity** and **Conciseness** which are described as follows:
+* **Clarity** - The ease of readability and delivery of key product attributes such as color, size, model, etc. Product titles with high clarity scores should be easy to understand and interpret quickly.
+
+* **Conciseness** - The optimal point of conveyed information with respect to product title length, i.e., the amount of redundant content in the product title. Product titles that do not contain all necessary information also violate this quality.
+
+The problem is framed as two separate regression tasks which try to predict a score within [0,1], each for clarity and conciseness. The labels provided, however, are binary (0 or 1).
+
 # File description
 ### Input data files
 The following data files are given by Lazada in the competition and can be re-downloaded from [here](https://drive.google.com/drive/folders/0B-rwT7IHM52ockZabnpvYVE3Z00):
