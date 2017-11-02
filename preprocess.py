@@ -36,6 +36,7 @@ def pre_process(df):
 
 
 if __name__ == "__main__":
+	
 	# Add headers
 	headers = ["country","sku_id","title","category_lvl_1","category_lvl_2","category_lvl_3","short_description","price","product_type","clarity","conciseness"]
 

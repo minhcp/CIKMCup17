@@ -16,46 +16,47 @@ def objFromFile(path):
 		return pickle.load(f)
 
 
-parser = argparse.ArgumentParser(description='parsing arguments')
-parser.add_argument('-class_idx', action="store",  dest="class_idx", type=int)
-parser.add_argument('-ratio_valid', action="store",  dest="ratio_valid", type=float)
-parser.add_argument('-k_fold', action="store",  dest="k_fold", type=int)
-parser.add_argument('-use_model', action="store",  dest="use_model")
-parser.add_argument('-create_new_data', action="store",  dest="create_new_data", type=int)
-parser.add_argument('-level', action="store",  dest="level", type=int)
-parser.add_argument('-n_k_fold', action="store",  dest="n_k_fold", type=int)
-parser.add_argument('-n_threads', action="store",  dest="n_threads", type=int)
-args = parser.parse_args()
-class_idx = args.class_idx
-ratio_valid = args.ratio_valid
-k_fold = args.k_fold
-use_model = args.use_model
-create_new_data = bool(args.create_new_data)
-level = args.level
-n_k_fold = args.n_k_fold
-n_threads = args.n_threads
-assert create_new_data == False
-get_prediction_kfold = True
-
-n_iters = {}
-if level==1:
-	if class_idx==-1:
-		n_iters['xgb'] = 6500
-		n_iters['lightgbm'] = 4500
-	else:
-		n_iters['xgb'] = 1400
-		n_iters['lightgbm'] = 1100
-else:
-	if class_idx==-1:
-		n_iters['xgb'] = 450
-		n_iters['lightgbm'] = 500
-	else:
-		n_iters['xgb'] = 500
-		n_iters['lightgbm'] = 500
-max_depth = 5
-
-
 if __name__ == "__main__":
+
+	parser = argparse.ArgumentParser(description='parsing arguments')
+	parser.add_argument('-class_idx', action="store",  dest="class_idx", type=int)
+	parser.add_argument('-ratio_valid', action="store",  dest="ratio_valid", type=float)
+	parser.add_argument('-k_fold', action="store",  dest="k_fold", type=int)
+	parser.add_argument('-use_model', action="store",  dest="use_model")
+	parser.add_argument('-create_new_data', action="store",  dest="create_new_data", type=int)
+	parser.add_argument('-level', action="store",  dest="level", type=int)
+	parser.add_argument('-n_k_fold', action="store",  dest="n_k_fold", type=int)
+	parser.add_argument('-n_threads', action="store",  dest="n_threads", type=int)
+	args = parser.parse_args()
+	class_idx = args.class_idx
+	ratio_valid = args.ratio_valid
+	k_fold = args.k_fold
+	use_model = args.use_model
+	create_new_data = bool(args.create_new_data)
+	level = args.level
+	n_k_fold = args.n_k_fold
+	n_threads = args.n_threads
+	assert create_new_data == False
+	get_prediction_kfold = True
+
+	n_iters = {}
+	if level==1:
+		if class_idx==-1:
+			n_iters['xgb'] = 6500
+			n_iters['lightgbm'] = 4500
+		else:
+			n_iters['xgb'] = 1400
+			n_iters['lightgbm'] = 1100
+	else:
+		if class_idx==-1:
+			n_iters['xgb'] = 450
+			n_iters['lightgbm'] = 500
+		else:
+			n_iters['xgb'] = 500
+			n_iters['lightgbm'] = 500
+	max_depth = 5
+
+
 	# Load extracted feature-data files
 	data_fname = 'data/extracted_features/data.class_idx.{}.{}_fold.{}.{}.lv{}.pickle'.format(class_idx, n_k_fold, k_fold, ratio_valid,level)
 	data_train, data_valid, sku_id_train, sku_id_valid = objFromFile(data_fname)

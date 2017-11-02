@@ -11,6 +11,7 @@ np.random.seed(1)
 
 
 if __name__ == "__main__":
+	
 	df_train = pd.read_csv("data/train/data_train_preprocessed.csv",delimiter=',', encoding='utf-8')
 	df_test = pd.read_csv("data/test1/data_valid_preprocessed.csv",delimiter=',', encoding='utf-8')
 	df_test2 = pd.read_csv("data/test2/data_test_preprocessed.csv",delimiter=',', encoding='utf-8')

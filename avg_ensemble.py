@@ -6,6 +6,7 @@ import numpy as np
 
 
 if __name__ == "__main__":
+	
 	for class_idx in [-2,-1]:
 		target = 'clarity' if class_idx==-2 else 'conciseness'
 		models_predictions = []
