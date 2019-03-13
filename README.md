@@ -1,6 +1,6 @@
-# CIKM AnalytiCup 2017 - Lazada Product Title Quality Challenge: A Bag of Features for Short Text Classification
+# Product Title Classification
 
-This repository contains source code for our solution at the [CIKM AnalytiCup 2017](https://competitions.codalab.org/competitions/16652). Its description can be found in the [report](#TBD).
+This repository contains source code for our solution at the [CIKM AnalytiCup 2017 - Lazada Product Title Quality Challenge](https://competitions.codalab.org/competitions/16652).
 
 # Problem
 The task is to determine the quality of product titles created by public users on the e-commerce platform Lazada. We focuses on two main objectives, namely **Clarity** and **Conciseness** which are described as follows:
