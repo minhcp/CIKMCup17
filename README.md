@@ -59,5 +59,3 @@ To re-create the all the preprocessed data files:
 prepare_data.sh
 train_predict.sh
 ```
-
-(by Minh C. Phan phan0050@e.ntu.edu.sg)
