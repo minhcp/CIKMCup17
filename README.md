@@ -3,7 +3,7 @@
 This repository contains source code for our solution at the [CIKM AnalytiCup 2017 - Lazada Product Title Quality Challenge](https://competitions.codalab.org/competitions/16652).
 
 # Problem
-The task is to determine the quality of product titles created by public users on the e-commerce platform Lazada. We focuses on two main objectives, namely **Clarity** and **Conciseness** which are described as follows:
+The task is to determine the quality of product titles created by public users on the e-commerce platform Lazada. We focus on two main objectives, namely **Clarity** and **Conciseness** which are described as follows:
 * **Clarity** - The ease of readability and delivery of key product attributes such as color, size, model, etc. Product titles with high clarity scores should be easy to understand and interpret quickly.
 
 * **Conciseness** - The optimal point of conveyed information with respect to product title length, i.e., the amount of redundant content in the product title. Product titles that do not contain all necessary information also violate this quality.
