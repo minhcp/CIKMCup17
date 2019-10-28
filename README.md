@@ -16,7 +16,7 @@ The problem is framed as two separate regression tasks which try to predict a sc
 
 # File description
 ### Input data files
-The following data files are given by Lazada in the competition and can be re-downloaded from [here](https://drive.google.com/drive/folders/0B-rwT7IHM52ockZabnpvYVE3Z00):
+The following data files are given by Lazada in the competition (https://competitions.codalab.org/competitions/1665):
 ```
 ./data/train/data_train.csv
 ./data/train/clarity_train.labels
