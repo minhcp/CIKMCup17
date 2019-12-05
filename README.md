@@ -10,10 +10,6 @@ The task is to determine the quality of product titles created by public users o
 
 The problem is framed as two separate regression tasks which try to predict a score within [0,1], each for clarity and conciseness. The labels provided, however, are binary (0 or 1).
 
-# Approach
-![Poster](poster.png)
-
-
 # File description
 ### Input data files
 The following data files are given by Lazada in the competition (https://competitions.codalab.org/competitions/1665):
